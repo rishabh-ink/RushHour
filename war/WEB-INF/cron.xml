@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+	<!-- SCHEDULED TASKS WITH CRON FOR JAVA -->
+	<cron>
+		<!-- The url url field is just a URL in your application
+		that will be called by the CRON daemon. -->
+		<url>/cron/refresh</url>
+		<description>Refreshes the data every 1 hour.</description>
+		<!-- Schedule format is
+		every N (hours|mins|minutes) ["from" (time) "to" (time)] -->
+		<schedule>every 1 hour</schedule>
+	</cron>
+	<!-- /SCHEDULED TASKS WITH CRON FOR JAVA -->
+</cronentries>
