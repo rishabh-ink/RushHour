@@ -10,14 +10,10 @@ header {
 	padding-top: 5px;
 }
 
-header .header-widget {
-	float: left;
+header .header-logo {
+	float: left;	
 }
 
-.ui-widget-content {
-	padding: 5px;
-}
-
-.ui-widget-content .ui-widget-header {
-	padding: 15px;
+header .welcome-panel {	
+	float: right;
 }
