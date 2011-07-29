@@ -13,3 +13,11 @@ header {
 header .header-widget {
 	float: left;
 }
+
+.ui-widget-content {
+	padding: 5px;
+}
+
+.ui-widget-content .ui-widget-header {
+	padding: 15px;
+}
