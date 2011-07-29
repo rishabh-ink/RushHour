@@ -1,0 +1,42 @@
+/*
+    Document   : header.css
+    Created on : Jul 17, 2011, 6:49:49 PM
+    Author     : Rishabh Rao
+    Description: This stylesheet contains the styling for the header.
+*/
+
+header {
+	height: 50px;
+	padding-top: 5px;
+}
+
+header .header-widget {
+	float: left;
+}
+
+header .search-textbox-wrapper,
+header .search-submit-button-wrapper,
+header .panel-manage-button-wrapper {
+	margin-top: 3px;
+	margin-left: 2px;
+	margin-right: 6px;
+}
+
+header .search-textbox-wrapper input {
+	width: 340px;
+	height: 23px;
+
+	/* Style the search box. */
+	border-width: 0px;
+	box-shadow: 4px 4px 10px 2px #888888 inset;
+	padding: 5px 25px 5px 5px;
+
+	/* Style the text inside the search box. */
+	text-shadow: 0px 1px 1px #AAAAAA;
+}
+
+header .search-clear-button-wrapper {
+	/* Make the clear button go inside the textbox. */
+	margin-left: -25px;
+	margin-top: 11px;
+}

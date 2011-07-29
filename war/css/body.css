@@ -1,0 +1,21 @@
+/*
+    Document   : body
+    Created on : Jul 16, 2011, 6:20:14 PM
+    Author     : Rishabh Rao
+    Description: This stylesheet contains the styling for the entire body.
+
+*/
+
+body {
+	background: #363635 url('../img/bodybg.png') repeat-x;
+}
+
+#container {
+	width: 800px;
+	min-width: 800px;
+	margin: auto;
+
+	/* DEBUG */
+
+	/* /DEBUG */
+}
