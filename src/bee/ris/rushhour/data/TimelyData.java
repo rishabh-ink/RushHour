@@ -36,6 +36,8 @@ class TimelyData<T> {
 				Array.newInstance(ArrayList.class, CLOCK24_HOUR_MAX);		   
 	}
 	
+	public <T> getDataAtTime()
+	
 	@Override
 	public String toString() {
 		// Appending to a StringBuffer is faster than string concatenation.
