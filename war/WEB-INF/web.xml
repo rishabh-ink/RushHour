@@ -5,15 +5,15 @@
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 	<servlet>
-		<servlet-name>RushHour</servlet-name>
-		<servlet-class>bee.ris.rushhour.RushHourServlet</servlet-class>
+		<servlet-name>RushHourMerchant</servlet-name>
+		<servlet-class>bee.ris.rushhour.merchants.RushHourMerchantServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>RushHour</servlet-name>
-		<url-pattern>/rushhour</url-pattern>
+		<servlet-name>RushHourMerchant</servlet-name>
+		<url-pattern>/rushhourmerchant</url-pattern>
 	</servlet-mapping>
 
-	<!-- The Refresh Servlet refreshes the cache. -->
+	<!-- The Refresh Servlet refreshes the cache.
 	<servlet>
 		<servlet-name>Refresh</servlet-name>
 		<servlet-class>bee.ris.rushhour.data.RefreshServlet</servlet-class>
@@ -36,7 +36,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<role-name>admin</role-name>, they cannot use URL paths restricted with <role-name>*</role-name>. -->
 	<security-constraint>
 		<web-resource-collection>
-			<url-pattern>/cron/*</url-pattern>
+			<url-pattern>/farmer</url-pattern>
 		</web-resource-collection>
 		<auth-constraint>
 			<role-name>admin</role-name>

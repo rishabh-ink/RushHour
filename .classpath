@@ -3,10 +3,5 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Foursquare"/>
-	<classpathentry kind="lib" path="/home/rishabh/eclipsews/RushHour/war/WEB-INF/lib/foursquare-api-1.0.0.jar"/>
-	<classpathentry kind="lib" path="/home/rishabh/eclipsews/RushHour/war/WEB-INF/lib/foursquare-api-1.0.0-javadoc.jar"/>
-	<classpathentry kind="lib" path="/home/rishabh/eclipsews/RushHour/war/WEB-INF/lib/foursquare-api-1.0.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/rishabh/eclipsews/RushHour/war/WEB-INF/lib/json-20090211.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
