@@ -8,5 +8,13 @@ package bee.ris.rushhour.data;
  * @since 0.0.2
  */
 public class Place {
-	
+	/**
+	 * The venue that this <code>Place</code> holds data for.
+	 */
+	private String placeName;
+	/**
+	 * The count of the number of people at this venue during all 24 hours of
+	 * the day.
+	 */
+	private int crowdCount;
 }
