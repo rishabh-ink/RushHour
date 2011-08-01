@@ -7,10 +7,11 @@ import java.util.ResourceBundle;
 
 /**
  * This class holds timely data (all 24 hours of the day.) 
+ * @param <T> The data type that this class must hold. 
  * @author Rishabh Rao
  * @since 0.0.4
  */
-class TimelyData<T> {
+class Timely<T> {
 	/**
 	 * The timely data for all 24 hours of the day, as an array.
 	 * @author Rishabh Rao
@@ -31,32 +32,20 @@ class TimelyData<T> {
 	 * @author Rishabh Rao
 	 * @since 0.0.4
 	 */
-	public TimelyData() {
-		data = (ArrayList<T>)
-				Array.newInstance(ArrayList.class, CLOCK24_HOUR_MAX);		   
+	public Timely() {
+		data = new ArrayList<T>(CLOCK24_HOUR_MAX);
 	}
 	
-	public <T> getDataAtTime()
+	public void setDataAt(T what, EClockConstants when) {
+		
+	}
 	
 	@Override
 	public String toString() {
 		// Appending to a StringBuffer is faster than string concatenation.
 		StringBuffer returnString = new StringBuffer();
+
 		
-		// Find out what type the TimelyDataType is in this object.
-		returnString.append(super.toString());
-		String timelyDataType = "TimelyDataType: "; // NOI18N
-		try {
-		timelyDataType +=TimelyData.class.getDeclaredField("data"). // NOI18N
-				getGenericType().toString();
-		} catch(NoSuchFieldException ex) {
-			// If we are not able to find the type, then ignore.
-			timelyDataType += ResourceBundle.getBundle("i18n", // NOI18N
-				Locale.getDefault()).
-				getString("TimelyData.toString.NoSuchFieldException.errorText"); // NOI18N
-		}
-		
-		returnString.append(timelyDataType);
 		
 		return returnString.toString();
 	}
