@@ -14,7 +14,7 @@ package bee.ris.rushhour.data;
  * @author Rishabh Rao
  * @since 0.0.4
  */
-public enum EClockConstants {
+public enum EHourOfDay {
 	MIDNIGHT(0),
 	AM_1(1),
 	AM_2(2),
@@ -45,30 +45,26 @@ public enum EClockConstants {
 	 * @author Rishabh Rao
 	 * @since 0.0.4
 	 */
-	private int value;
+	private int hour;
 
 	/**
-	 * A private construct that sets the enum's value.
+	 * A private construct that sets the enum's hour.
 	 * 
-	 * @param value
+	 * @param hour
 	 *            The time constant for the hour.
+	 * @author Rishabh Rao
+	 * @since 0.0.4
 	 */
-	private EClockConstants(int value) {
-		this.setValue(value);
+	private EHourOfDay(final int hour) {
+		this.hour = hour;
 	}
 
 	/**
 	 * @return The time constant for the hour.
+	 * @author Rishabh Rao
+	 * @since 0.0.4
 	 */
-	public int getValue() {
-		return value;
-	}
-
-	/**
-	 * @param value
-	 *            The time constant for the hour.
-	 */
-	private void setValue(int value) {
-		this.value = value;
+	public int getHour() {
+		return hour;
 	}
 }

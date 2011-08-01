@@ -1,9 +1,6 @@
 package bee.ris.rushhour.data;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Locale;
-import java.util.ResourceBundle;
 
 /**
  * This class holds timely data (all 24 hours of the day.) 
@@ -36,8 +33,24 @@ class Timely<T> {
 		data = new ArrayList<T>(CLOCK24_HOUR_MAX);
 	}
 	
-	public void setDataAt(T what, EClockConstants when) {
-		
+	/**
+	 * Sets the value of the data to be stored against the hour.
+	 * @param when The hour of the day that this value corresponds to.
+	 * @param what The value of the data to be assigned at <code>when</code>.
+	 * @author Rishabh Rao
+	 * @since 0.0.4
+	 */
+	public void setDataAt(final EHourOfDay when, final T what) {
+		this.data.set(when.getHour(), what);
+	}
+	
+	/**
+	 * Gets the value of the data stored against the hour.
+	 * @param when The hour of the day that this value corresponds to.
+	 * @return The value of the data to be assigned at <code>when</code>.
+	 */
+	public T getDataAt(final EHourOfDay when) {
+		return this.data.get(when.getHour());
 	}
 	
 	@Override
@@ -45,8 +58,6 @@ class Timely<T> {
 		// Appending to a StringBuffer is faster than string concatenation.
 		StringBuffer returnString = new StringBuffer();
 
-		
-		
 		return returnString.toString();
 	}
 }
