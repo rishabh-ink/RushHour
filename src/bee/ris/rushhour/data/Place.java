@@ -1,5 +1,8 @@
 package bee.ris.rushhour.data;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 /**
  * This class defines the data storage schema for a <code>Place</code> entity
  * which will be stored in the datastore. It also provides serialization methods
@@ -8,6 +11,12 @@ package bee.ris.rushhour.data;
  * @since 0.0.2
  */
 public class Place {
+	/**
+	 * A unique identification code for a place.
+	 * @author Rishabh Rao
+	 * @since 0.0.5
+	 */
+	private String placeId;
 	/**
 	 * The venue that this <code>Place</code> holds data for.
 	 * @author Rishabh Rao
@@ -27,41 +36,22 @@ public class Place {
 	 * @since 0.0.5
 	 */
 	private Timely<Integer> refreshCount;
-	
-	
-	
 	/**
 	 * The maximum number of characters that a place name can contain.
 	 * @author Rishabh Rao
 	 * @since 0.0.5
 	 */
-	public static final int MAX_PLACE_NAME_LENGTH = 256;
-	
-	public Place(final String placeName) {
-		
-	}
-
+	protected static final int MAX_PLACE_NAME_LENGTH = 256;
 	/**
-	 * @return The venue that this <code>Place</code> holds data for.
+	 * Creates and initializes the <code>Place</code> object for counting.
+	 * @param placeId A unique identification code for a place.
+	 * @param placeName The venue name of this <code>Place</code>.
 	 * @author Rishabh Rao
 	 * @since 0.0.5
 	 */
-	public String getPlaceName() {
-		return placeName;
-	}
-
-	/**
-	 * @param placeName The venue that this <code>Place</code> holds data for.
-	 * @author Rishabh Rao
-	 * @since 0.0.5
-	 */
-	public void setPlaceName(final String placeName) {
-		// Do not allow lengthly place names.
-		if(placeName.length() >= Place.MAX_PLACE_NAME_LENGTH) {
-			// Truncate if required.
-			placeName.substring(0, Place.MAX_PLACE_NAME_LENGTH);
-		}
-		
-		this.placeName = placeName;
+	public Place(final String placeId, final String placeName) {
+		this.setPlaceName(placeName);
+		this.crowdCount = new Timely<Integer>();
+		this.refreshCount = new Timely<Integer>();
 	}
 }
