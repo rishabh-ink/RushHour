@@ -40,7 +40,7 @@ class Timely<T> {
 	 * @author Rishabh Rao
 	 * @since 0.0.4
 	 */
-	public void setDataAt(final EHourOfDay when, final T what) {
+	public void setDataAt(final EHourOfDay when, final T what) {		
 		this.data.set(when.getHour(), what);
 	}
 	
@@ -48,6 +48,8 @@ class Timely<T> {
 	 * Gets the value of the data stored against the hour.
 	 * @param when The hour of the day that this value corresponds to.
 	 * @return The value of the data to be assigned at <code>when</code>.
+	 * @author Rishabh Rao
+	 * @since 0.0.4
 	 */
 	public T getDataAt(final EHourOfDay when) {
 		return this.data.get(when.getHour());
@@ -57,7 +59,10 @@ class Timely<T> {
 	public String toString() {
 		// Appending to a StringBuffer is faster than string concatenation.
 		StringBuffer returnString = new StringBuffer();
-
+		returnString.append(super.toString())
+					.append(" [CLOCK24_HOUR_MAX=" + Timely.CLOCK24_HOUR_MAX) // NOI18N
+					.append(", data=" + data.toString()) // NOI18N
+					.append("]"); // NOI18N
 		return returnString.toString();
 	}
 }

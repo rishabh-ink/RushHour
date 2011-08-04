@@ -3,14 +3,10 @@ package bee.ris.rushhour.data;
 /**
  * This enumeration provides the constants used to refer various elements of a
  * clock.
- * <p>
- * For example, to refer to the hour at 1pm in a 12-hour clock format, the
- * constant, <code>HOUR12_1_PM</code>, should be used.
- * </p>
- * <p>
- * To refer the same hour in a 24-hour clock format, the constant,
- * <code>HOUR24_1</code> should be used.
- * 
+ * <p>For example, to refer to the hour at 1pm in a 12-hour clock format, the
+ * constant, <code>HOUR12_1_PM</code>, should be used.</p>
+ * <p>To refer the same hour in a 24-hour clock format, the constant,
+ * <code>HOUR24_1</code> should be used.</p>
  * @author Rishabh Rao
  * @since 0.0.4
  */
@@ -41,7 +37,6 @@ public enum EHourOfDay {
 	PM_11(23);
 	/**
 	 * The time constant for the hour.
-	 * 
 	 * @author Rishabh Rao
 	 * @since 0.0.4
 	 */
@@ -49,9 +44,7 @@ public enum EHourOfDay {
 
 	/**
 	 * A private construct that sets the enum's hour.
-	 * 
-	 * @param hour
-	 *            The time constant for the hour.
+	 * @param hour The time constant for the hour.
 	 * @author Rishabh Rao
 	 * @since 0.0.4
 	 */
@@ -60,6 +53,7 @@ public enum EHourOfDay {
 	}
 
 	/**
+	 * Gets the <code>hour</code>.
 	 * @return The time constant for the hour.
 	 * @author Rishabh Rao
 	 * @since 0.0.4
