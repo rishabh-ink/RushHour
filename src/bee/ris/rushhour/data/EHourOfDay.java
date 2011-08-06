@@ -61,4 +61,17 @@ public enum EHourOfDay {
 	public int getHour() {
 		return hour;
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder returnString = new StringBuilder();
+		
+		returnString.append(super.toString())
+					.append(" ")
+					.append(EHourOfDay.class.getSimpleName())
+					.append(":[hour=").append(this.hour)
+					.append("]");
+		
+		return returnString.toString();
+	}
 }
